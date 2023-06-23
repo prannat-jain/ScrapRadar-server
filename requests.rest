@@ -1,0 +1,7 @@
+POST http://localhost:3001/saleinventoryitem/new
+
+Content-Type: application/json
+
+{
+    "text": "Paper for sale"
+}

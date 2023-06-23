@@ -1,0 +1,21 @@
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const SaleInventorySchema = new Schema({
+  text: {
+    type: String,
+    //required: true,
+  },
+  stillAvailable: {
+    type: Boolean,
+    default: true,
+  },
+  timeStamp: {
+    type: String,
+    default: Date.now(),
+  },
+});
+
+const SaleInventory = mongoose.model("SaleInventory", SaleInventorySchema);
+
+module.exports = SaleInventory;
