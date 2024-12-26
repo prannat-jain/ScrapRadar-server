@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 const uri =
-  "mongodb+srv://prannat:prannat.123@cluster0.1wwdrvu.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.7";
 
 mongoose
   .connect(uri, {
@@ -22,6 +22,7 @@ mongoose
   .then(() => console.log("Connected to mongoDB"))
   .catch(console.error);
 
+//start server on port 3001
 app.listen(3001, () => console.log("Server started on port 3001"));
 
 //import created model for db
